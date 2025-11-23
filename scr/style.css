@@ -53,6 +53,7 @@ h4 {
   justify-content: center;
   color: #ffffff;
   padding: 80px 0;
+  margin-bottom: 80px; /* --- NEU: Abstand unter Hero --- */
 }
 
 .hero-overlay {
@@ -103,49 +104,15 @@ h4 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Speziell im About-Bereich: untereinander, links ausgerichtet */
-.about-meta {
-  max-width: 260px;
-}
-
-.about-meta .hero-pill {
-  display: block;
-  margin-right: 0;
-  margin-bottom: 0.5rem;
-}
-
-/* Buttons im Hero */
-.hero-banner .btn-primary {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #111827;
-  font-weight: 600;
-}
-
-.hero-banner .btn-primary:hover {
-  background-color: #e5e7eb;
-  border-color: #e5e7eb;
-  color: #111827;
-}
-
-/* Eyebrow */
-.eyebrow {
-  letter-spacing: 0.16em;
-  font-size: 0.75rem;
-  color: var(--color-green);
-  font-weight: 600;
-}
-
 /* ---------------- SPACING FÜR ALLE SECTIONS ---------------- */
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0; /* Mehr Abstand oben und unten */
 }
 
-/* Abstand zwischen zwei direkt aufeinanderfolgenden Sections */
-.section + .section {
-  margin-top: 80px;
+/* Abstand zwischen Sections */
+main > .section + .section {
+  margin-top: 100px;
 }
 
 .section-header .section-title {
@@ -155,20 +122,6 @@ h4 {
 
 .section-header {
   margin-bottom: 2.5rem;
-}
-
-/* ---------- ABOUT-BILD ---------- */
-
-.about-image-wrapper {
-  border-radius: 1.2rem;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.about-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* ---------- HIGHLIGHTS ---------- */
@@ -186,24 +139,32 @@ h4 {
 }
 
 .card-img-top-wrapper {
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
+/* 🆕 Deutlicher Bild-Hover-Effekt – jetzt zuverlässig */
 .highlight-card .card-img-top {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Deutlicher Bild-Hover-Effekt */
-.highlight-card img {
   transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-.highlight-card img:hover {
+.highlight-card:hover .card-img-top {
   filter: grayscale(100%) brightness(0.9);
-  transform: scale(1.02);
+  transform: scale(1.03);
+}
+
+/* ---------- ABOUT-BILD ---------- */
+
+.about-image-wrapper {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ---------- VIDEO ---------- */
@@ -241,20 +202,6 @@ h4 {
   font-size: 1.1rem;
 }
 
-/* ---------- AKTIVITÄTEN ---------- */
-
-.icon-circle {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background-color: var(--color-sand);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-green);
-  font-size: 1.4rem;
-}
-
 /* ---------- ANGEBOTE ---------- */
 
 .offer-price {
@@ -267,7 +214,7 @@ h4 {
   font-size: 0.9rem;
 }
 
-/* ---------- TABLE: BESTE REISEZEIT ---------- */
+/* ---------- TABLE WRAPPER ---------- */
 
 .climate-table-wrapper {
   border-radius: 1.2rem;
@@ -279,11 +226,6 @@ h4 {
 .climate-table thead {
   background-color: var(--color-ocean);
   color: #ffffff;
-}
-
-.climate-table th,
-.climate-table td {
-  vertical-align: middle;
 }
 
 /* ---------- NEWSLETTER ---------- */
@@ -321,17 +263,10 @@ h4 {
 
 /* ----------- RESPONSIVE ----------- */
 
-/* Nur noch spezielle Elemente anpassen – nicht mehr .section überschreiben */
-
 @media (max-width: 767.98px) {
   .hero-banner {
     padding: 60px 0;
     min-height: 65vh;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-    padding: 0 1rem;
   }
 
   .card-img-top-wrapper {
@@ -341,19 +276,12 @@ h4 {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .card-img-top-wrapper {
-    height: 200px;
+    height: 210px;
   }
 }
 
 @media (min-width: 992px) {
   .card-img-top-wrapper {
-    height: 220px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-item {
-    flex: 0 0 200px;
-    height: 200px;
+    height: 240px;
   }
 }
