@@ -94,15 +94,26 @@ h4 {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
 }
 
+/* Hero Bild */
+.hero-image {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  max-height: 380px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ---------------- SPACING FÜR ALLE SECTIONS ---------------- */
 
-/* Grundabstand (Mobile-First) */
 .section {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-/* Extra Abstand ZWISCHEN Sections */
 .section + .section {
   margin-top: 70px;
 }
@@ -122,48 +133,25 @@ h4 {
   margin-bottom: 2.5rem;
 }
 
-/* Platzhalter-Bilder */
-.image-placeholder {
-  background: linear-gradient(135deg, #e0f2ff, #fbe4c8);
-  border-radius: 1rem;
-  border: 1px dashed rgba(0, 0, 0, 0.15);
-  padding: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-  font-size: 0.9rem;
-  text-align: center;
-  overflow: hidden; /* verhindert „verschobene“ Bilder */
+/* ---------- HIGHLIGHTS THUMBNAILS ---------- */
+
+.highlight-card {
+  padding-top: 0;
 }
 
-/* Bilder in Platzhaltern immer schön passend */
-.image-placeholder img {
+.card-img-top-wrapper {
+  height: 160px;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.highlight-card .card-img-top {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Hero-Bild: nicht zu groß, nicht zu klein */
-.image-placeholder.large {
-  display: block; /* Flex hier rausnehmen, sonst verschiebt es das Bild */
-  padding: 0; /* kein Extra-Padding um das Foto */
-  min-height: 0;
-  max-height: 360px;
-}
-
-/* Galerie: breite Variante */
-.image-placeholder.wide {
-  min-height: 180px;
-  max-height: 260px;
-}
-
-/* Galerie-Kacheln */
-.gallery-grid .image-placeholder {
-  min-height: 140px;
-}
-
-/* Video-Placeholder */
+/* ---------- VIDEO ---------- */
 .video-placeholder {
   border-radius: 1.5rem;
   background: radial-gradient(circle at top left, #1e6ba8 0, #0e3a5a 60%);
@@ -177,7 +165,6 @@ h4 {
   gap: 1rem;
 }
 
-/* YouTube-Video responsive */
 .video-placeholder iframe {
   width: 100%;
   max-width: 100%;
@@ -198,7 +185,8 @@ h4 {
   font-size: 1.1rem;
 }
 
-/* Aktivitäten Icons */
+/* ---------- AKTIVITÄTEN ICONS ---------- */
+
 .icon-circle {
   width: 52px;
   height: 52px;
@@ -211,7 +199,8 @@ h4 {
   font-size: 1.4rem;
 }
 
-/* Angebote */
+/* ---------- ANGEBOTE ---------- */
+
 .offer-price {
   font-size: 1.3rem;
   font-weight: 600;
@@ -222,7 +211,31 @@ h4 {
   font-size: 0.9rem;
 }
 
-/* Newsletter */
+/* ---------- GALERIE ---------- */
+
+.image-placeholder {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.gallery-grid .image-placeholder {
+  min-height: 140px;
+  max-height: 280px;
+}
+
+.gallery-grid .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-placeholder.wide {
+  min-height: 180px;
+  max-height: 260px;
+}
+
+/* ---------- NEWSLETTER ---------- */
+
 .newsletter {
   background: linear-gradient(120deg, #e4f1ff, #fff5e6);
 }
@@ -231,7 +244,8 @@ h4 {
   border-radius: 1.5rem;
 }
 
-/* Footer */
+/* ---------- FOOTER ---------- */
+
 .site-footer .footer-link {
   color: #e2e2e2;
   text-decoration: none;
@@ -241,7 +255,8 @@ h4 {
   text-decoration: underline;
 }
 
-/* Buttons */
+/* ---------- BUTTONS ---------- */
+
 .btn-primary {
   background-color: var(--color-ocean);
   border-color: var(--color-ocean);
@@ -269,7 +284,11 @@ h4 {
     margin-top: 50px;
   }
 
-  .image-placeholder.large {
+  .card-img-top-wrapper {
+    height: 180px;
+  }
+
+  .hero-image {
     max-height: 260px;
   }
 }
@@ -281,8 +300,8 @@ h4 {
     padding-bottom: 90px;
   }
 
-  .section + .section {
-    margin-top: 60px;
+  .card-img-top-wrapper {
+    height: 180px;
   }
 }
 
