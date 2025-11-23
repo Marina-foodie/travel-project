@@ -1,0 +1,299 @@
+:root {
+  --color-ocean: #1e6ba8;
+  --color-green: #2e8b57;
+  --color-accent: #f4a261;
+  --color-sand: #f5f1eb;
+  --color-text: #333333;
+}
+
+/* Basis-Typografie */
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: var(--color-text);
+}
+
+/* Alle Bilder generell responsive halten */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-title,
+.section-title,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Header */
+.site-header {
+  backdrop-filter: blur(10px);
+}
+
+/* Logo */
+.logo-icon {
+  font-size: 1.4rem;
+}
+
+/* Hero */
+.hero {
+  background: radial-gradient(
+    circle at top left,
+    #fdf4e3 0,
+    #c0e4ff 45%,
+    #fff 80%
+  );
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle at bottom right,
+    rgba(46, 139, 87, 0.12),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.eyebrow {
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  max-width: 32rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.hero-pill {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.hero-chip {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
+}
+
+/* ---------------- SPACING FÜR ALLE SECTIONS ---------------- */
+
+/* Grundabstand (Mobile-First) */
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Extra Abstand ZWISCHEN Sections */
+.section + .section {
+  margin-top: 70px;
+}
+
+/* Etwas mehr Luft nach dem Video-Block */
+#video {
+  padding-bottom: 100px;
+}
+
+/* Titelgröße & Luft unter den Überschriften */
+.section-header .section-title {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+}
+
+/* Platzhalter-Bilder */
+.image-placeholder {
+  background: linear-gradient(135deg, #e0f2ff, #fbe4c8);
+  border-radius: 1rem;
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 0.9rem;
+  text-align: center;
+  overflow: hidden; /* verhindert „verschobene“ Bilder */
+}
+
+/* Bilder in Platzhaltern immer schön passend */
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero-Bild: nicht zu groß, nicht zu klein */
+.image-placeholder.large {
+  display: block; /* Flex hier rausnehmen, sonst verschiebt es das Bild */
+  padding: 0; /* kein Extra-Padding um das Foto */
+  min-height: 0;
+  max-height: 360px;
+}
+
+/* Galerie: breite Variante */
+.image-placeholder.wide {
+  min-height: 180px;
+  max-height: 260px;
+}
+
+/* Galerie-Kacheln */
+.gallery-grid .image-placeholder {
+  min-height: 140px;
+}
+
+/* Video-Placeholder */
+.video-placeholder {
+  border-radius: 1.5rem;
+  background: radial-gradient(circle at top left, #1e6ba8 0, #0e3a5a 60%);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+/* YouTube-Video responsive */
+.video-placeholder iframe {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  border: 0;
+}
+
+.play-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
+  font-size: 1.1rem;
+}
+
+/* Aktivitäten Icons */
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--color-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-green);
+  font-size: 1.4rem;
+}
+
+/* Angebote */
+.offer-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.offer-tag {
+  font-size: 0.9rem;
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(120deg, #e4f1ff, #fff5e6);
+}
+
+.newsletter-box {
+  border-radius: 1.5rem;
+}
+
+/* Footer */
+.site-footer .footer-link {
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+.site-footer .footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-ocean);
+  border-color: var(--color-ocean);
+}
+
+.btn-primary:hover {
+  background-color: #15547f;
+  border-color: #15547f;
+}
+
+/* ----------- Responsive Feintuning ----------- */
+
+/* Mobile (bis 768px) */
+@media (max-width: 767.98px) {
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .section + .section {
+    margin-top: 50px;
+  }
+
+  .image-placeholder.large {
+    max-height: 260px;
+  }
+}
+
+/* Tablet (768px bis 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .section + .section {
+    margin-top: 60px;
+  }
+}
+
+/* Desktop (ab 992px) */
+@media (min-width: 992px) {
+  .section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .section + .section {
+    margin-top: 80px;
+  }
+}
