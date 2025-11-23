@@ -73,6 +73,7 @@
           <a href="#activities" class="nav-link px-0">Aktivitäten</a>
           <a href="#offers" class="nav-link px-0">Angebote</a>
           <a href="#gallery" class="nav-link px-0">Galerie</a>
+          <a href="#climate" class="nav-link px-0">Reisezeiten</a>
           <a href="#newsletter" class="btn btn-outline-primary btn-sm ms-1">
             Reisetipps
           </a>
@@ -89,55 +90,67 @@
     </header>
 
     <main id="top">
-      <!-- HERO -->
-      <section class="hero position-relative py-5">
+      <section class="hero hero-banner d-flex align-items-center">
         <div class="hero-overlay"></div>
-        <div class="container position-relative">
-          <!-- Hero Bild -->
-          <div class="hero-image-wrapper mb-4">
-            <img
-              src="/images/Sonnenaufgang über den Wolken am Pico do Arieiro.jpeg"
-              alt="Sonnenaufgang über den Wolken am Pico do Arieiro"
-              class="hero-image"
-            />
-            <p class="hero-image-caption">
-              🌄 Sonnenaufgang über den Wolken am Pico do Arieiro
-            </p>
-          </div>
-
-          <!-- Hero Text -->
-          <p class="eyebrow text-uppercase mb-2">Insel des ewigen Frühlings</p>
-          <h1 class="hero-title">Entdecke das Paradies Madeira</h1>
-          <p class="hero-subtitle">
+        <div class="container position-relative text-center">
+          <p class="hero-kicker text-uppercase mb-2">
+            Insel des ewigen Frühlings
+          </p>
+          <h1 class="hero-title mb-3">Entdecke das Paradies Madeira</h1>
+          <p class="hero-subtitle mb-4">
             Dramatische Steilküsten, mystische Wälder und charmante Küstenstädte
             – erlebe eine Reise, die du nie vergisst.
           </p>
 
-          <!-- Buttons -->
-          <div class="d-flex flex-wrap gap-2 mb-3">
-            <a href="#offers" class="btn btn-primary">
+          <div class="d-flex justify-content-center flex-wrap gap-3 mb-0">
+            <a href="#offers" class="btn btn-primary btn-lg px-4">
               <i class="fas fa-plane-departure me-2"></i>Jetzt Reise planen
             </a>
-            <a href="#highlights" class="btn btn-outline-primary">
+
+            <a href="#highlights" class="btn btn-primary btn-lg px-4">
               <i class="fas fa-map-location-dot me-2"></i>Highlights ansehen
             </a>
           </div>
-
-          <!-- Meta-Pills -->
-          <ul class="list-inline hero-meta small text-muted mb-0">
-            <li class="list-inline-item hero-pill">
-              ☀️ 18–24°C das ganze Jahr
-            </li>
-            <li class="list-inline-item hero-pill">🥾 Top Wanderwege</li>
-            <li class="list-inline-item hero-pill">
-              ✈️ Flüge ab vielen Städten
-            </li>
-          </ul>
         </div>
       </section>
 
-      <!-- HIGHLIGHTS -->
-      <section id="highlights" class="section bg-light">
+      <section id="about" class="section bg-light">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <!-- Linke Spalte: 3 Icons mit Text -->
+            <div class="col-md-5">
+              <ul class="list-unstyled hero-meta large mb-0 about-meta">
+                <li class="hero-pill">☀️ 18–24°C das ganze Jahr</li>
+                <li class="hero-pill">🥾 Top Wanderwege</li>
+                <li class="hero-pill">✈️ Flüge ab vielen Städten</li>
+              </ul>
+            </div>
+
+            <!-- Rechte Spalte: Text wie bisher -->
+            <div class="col-md-7">
+              <p class="eyebrow text-uppercase mb-2">Warum Madeira?</p>
+              <h2 class="section-title mb-3">
+                Madeira, die Insel der Vielfalt
+              </h2>
+              <p class="text-muted">
+                Madeira vereint spektakuläre Steilküsten, sattgrüne Berge und
+                subtropische Gärten. In Funchal findest du charmante
+                Altstadtgassen, lebendige Märkte und eine entspannte
+                Hafenpromenade.
+              </p>
+              <p class="text-muted">
+                Ob Wandern entlang der Levadas, Bootstouren mit
+                Delfinbeobachtung oder einfach entspannen bei einem Glas
+                Madeira-Wein – auf dieser Insel findest du zu jeder Jahreszeit
+                dein persönliches Lieblingsabenteuer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HIGHLIGHTS – CARDS & GRID -->
+      <section id="highlights" class="section">
         <div class="container">
           <header class="section-header text-center mb-4">
             <h2 class="section-title">Highlights von Madeira</h2>
@@ -153,7 +166,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Pico do Arieiro.jpeg"
+                    src="images/Pico do Arieiro.jpeg"
                     alt="Pico do Arieiro bei Sonnenaufgang"
                     class="card-img-top"
                   />
@@ -173,7 +186,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Levadas Wanderungen.jpeg"
+                    src="images/Levadas Wanderungen.jpeg"
                     alt="Levada-Wanderweg durch den Wald"
                     class="card-img-top"
                   />
@@ -193,7 +206,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Funchal Altstadt.jpeg"
+                    src="images/Funchal Altstadt.jpeg"
                     alt="Altstadt von Funchal"
                     class="card-img-top"
                   />
@@ -213,7 +226,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Delfin- & Walbeobachtung.jpeg"
+                    src="images/Delfin- & Walbeobachtung.jpeg"
                     alt="Delfine neben einem Boot vor Madeira"
                     class="card-img-top"
                   />
@@ -233,7 +246,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Botanischer Garten.jpeg"
+                    src="images/Botanischer Garten.jpeg"
                     alt="Botanischer Garten auf Madeira"
                     class="card-img-top"
                   />
@@ -253,7 +266,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Cabo Girão Skywalk.jpeg"
+                    src="images/Cabo Girão Skywalk.jpeg"
                     alt="Cabo Girão Skywalk"
                     class="card-img-top"
                   />
@@ -271,8 +284,8 @@
         </div>
       </section>
 
-      <!-- VIDEO -->
-      <section id="video" class="section">
+      <!-- VIDEO-EMBED -->
+      <section id="video" class="section bg-light">
         <div class="container">
           <div class="row align-items-center gy-4">
             <div class="col-lg-6">
@@ -281,8 +294,11 @@
                   <i class="fas fa-play"></i>
                 </div>
                 <iframe
-                  src="https://www.youtube.com/embed/NQ7kqeoX3fQ?si=0B2PAgtJuiahRgoc"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/NQ7kqeoX3fQ?si=dwBP0S6SxSgBfkqq"
                   title="YouTube video player"
+                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
@@ -310,8 +326,8 @@
         </div>
       </section>
 
-      <!-- AKTIVITÄTEN -->
-      <section id="activities" class="section bg-light">
+      <!-- AKTIVITÄTEN – CARDS -->
+      <section id="activities" class="section">
         <div class="container">
           <header class="section-header text-center mb-4">
             <h2 class="section-title">Aktivitäten auf Madeira</h2>
@@ -376,8 +392,8 @@
         </div>
       </section>
 
-      <!-- ANGEBOTE -->
-      <section id="offers" class="section">
+      <!-- ANGEBOTE – CARDS -->
+      <section id="offers" class="section bg-light">
         <div class="container">
           <header class="section-header text-center mb-4">
             <h2 class="section-title">Reiseangebote für Madeira</h2>
@@ -451,52 +467,54 @@
         </div>
       </section>
 
-      <!-- GALERIE / MADEIRA MOMENTS -->
-      <section id="gallery" class="section bg-light">
+      <!-- HTML TABLE – BESTE REISEZEIT -->
+      <section id="climate" class="section bg-light">
         <div class="container">
           <header class="section-header text-center mb-4">
-            <h2 class="section-title">Madeira Moments</h2>
+            <h2 class="section-title">Beste Reisezeit für Madeira</h2>
             <p class="text-muted mb-0">
-              Ein Blick in die Insel – wie Reisende sie sehen.
+              Mildes Klima das ganze Jahr – hier ein Überblick über Temperaturen
+              und Stimmung.
             </p>
           </header>
 
-          <div class="row g-4 gallery-grid">
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="gallery-item">
-                <img
-                  src="/images/Funchal bei Nacht.png"
-                  alt="Funchal bei Nacht"
-                />
-              </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="gallery-item">
-                <img
-                  src="/images/Levadas & Wald.png"
-                  alt="Levadas und Wald auf Madeira"
-                />
-              </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="gallery-item">
-                <img
-                  src="/images/Blumen & Gärten.png"
-                  alt="Blumen und Gärten auf Madeira"
-                />
-              </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="gallery-item">
-                <img
-                  src="/images/Sonnenuntergang am Meer.png"
-                  alt="Sonnenuntergang am Meer vor Madeira"
-                />
-              </div>
-            </div>
+          <div class="table-responsive climate-table-wrapper">
+            <table class="table table-striped align-middle climate-table">
+              <thead>
+                <tr>
+                  <th>Monat</th>
+                  <th>Ø Temperatur</th>
+                  <th>Regenwahrscheinlichkeit</th>
+                  <th>Empfohlene Aktivitäten</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Januar – März</td>
+                  <td>16–18&nbsp;°C</td>
+                  <td>mittel</td>
+                  <td>Stadtbesuche, Küstenwanderungen</td>
+                </tr>
+                <tr>
+                  <td>April – Juni</td>
+                  <td>18–22&nbsp;°C</td>
+                  <td>gering</td>
+                  <td>Levadas, Blumenfest, Bootstouren</td>
+                </tr>
+                <tr>
+                  <td>Juli – September</td>
+                  <td>23–26&nbsp;°C</td>
+                  <td>sehr gering</td>
+                  <td>Schwimmen, Schnorcheln, Sonnenuntergänge</td>
+                </tr>
+                <tr>
+                  <td>Oktober – Dezember</td>
+                  <td>18–21&nbsp;°C</td>
+                  <td>mittel</td>
+                  <td>Wandern, Kulinarik, Weihnachtsbeleuchtung</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -562,8 +580,8 @@
             <ul class="list-unstyled small mb-0">
               <li><a href="#highlights" class="footer-link">Highlights</a></li>
               <li><a href="#offers" class="footer-link">Angebote</a></li>
-              <li><a href="#" class="footer-link">FAQ</a></li>
-              <li><a href="#" class="footer-link">Datenschutz</a></li>
+              <li><a href="#gallery" class="footer-link">Galerie</a></li>
+              <li><a href="#climate" class="footer-link">Reisezeiten</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-3">

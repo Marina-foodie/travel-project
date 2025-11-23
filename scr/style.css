@@ -11,6 +11,7 @@ body {
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   color: var(--color-text);
+  background-color: #f5f5f7;
 }
 
 img {
@@ -38,28 +39,96 @@ h4 {
   font-size: 1.4rem;
 }
 
-/* Hero */
-.hero {
-  background: radial-gradient(
-    circle at top left,
-    #fdf4e3 0,
-    #c0e4ff 45%,
-    #fff 80%
-  );
+/* ---------- HERO BANNER ---------- */
+
+.hero-banner {
   position: relative;
+  min-height: 80vh;
+  background-image: url("/images/Sonnenaufgang über den Wolken am Pico do Arieiro.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 80px 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    circle at bottom right,
-    rgba(46, 139, 87, 0.12),
-    transparent 55%
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.75) 100%
   );
-  pointer-events: none;
+  z-index: 1;
 }
 
+.hero-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-kicker {
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  max-width: 38rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #f2f2f2;
+}
+
+.hero-pill {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333333;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: inline-block;
+  margin: 12px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Speziell im About-Bereich: untereinander, links ausgerichtet */
+.about-meta {
+  max-width: 260px;
+}
+
+.about-meta .hero-pill {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons im Hero */
+.hero-banner .btn-primary {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #111827;
+  font-weight: 600;
+}
+
+.hero-banner .btn-primary:hover {
+  background-color: #e5e7eb;
+  border-color: #e5e7eb;
+  color: #111827;
+}
+
+/* Eyebrow */
 .eyebrow {
   letter-spacing: 0.16em;
   font-size: 0.75rem;
@@ -67,72 +136,18 @@ h4 {
   font-weight: 600;
 }
 
-.hero-title {
-  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
-  margin-bottom: 0.5rem;
-}
-
-.hero-subtitle {
-  max-width: 38rem;
-  color: #666;
-  margin-bottom: 1.25rem;
-}
-
-.hero-meta {
-  margin-top: 0.5rem;
-}
-
-.hero-pill {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 999px;
-  padding: 0.25rem 0.65rem;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.hero-chip {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 999px;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
-}
-
-/* Hero Bild zentriert & formatiert */
-.hero-image-wrapper {
-  max-width: 520px;
-  margin: 0 auto 1.5rem auto;
-}
-
-.hero-image {
-  width: 100%;
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
-}
-
-.hero-image-caption {
-  font-size: 0.9rem;
-  color: #666;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
 /* ---------------- SPACING FÜR ALLE SECTIONS ---------------- */
 
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
+/* Abstand zwischen zwei direkt aufeinanderfolgenden Sections */
 .section + .section {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
-#video {
-  padding-bottom: 100px;
-}
-
-/* Titelgrößen */
 .section-header .section-title {
   font-size: 2rem;
   margin-bottom: 0.75rem;
@@ -142,13 +157,27 @@ h4 {
   margin-bottom: 2.5rem;
 }
 
+/* ---------- ABOUT-BILD ---------- */
+
+.about-image-wrapper {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ---------- HIGHLIGHTS ---------- */
 
 .highlight-card {
-  padding-top: 0;
   border-radius: 1rem;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
 }
 
 .highlight-card:hover {
@@ -165,6 +194,16 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Deutlicher Bild-Hover-Effekt */
+.highlight-card img {
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.highlight-card img:hover {
+  filter: grayscale(100%) brightness(0.9);
+  transform: scale(1.02);
 }
 
 /* ---------- VIDEO ---------- */
@@ -228,26 +267,23 @@ h4 {
   font-size: 0.9rem;
 }
 
-/* ---------- GALERIE (Madeira Moments) ---------- */
+/* ---------- TABLE: BESTE REISEZEIT ---------- */
 
-.gallery-grid .gallery-item {
-  width: 100%;
-  height: 200px;
-  border-radius: 1rem;
+.climate-table-wrapper {
+  border-radius: 1.2rem;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
 }
 
-.gallery-grid .gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.climate-table thead {
+  background-color: var(--color-ocean);
+  color: #ffffff;
 }
 
-.gallery-grid .gallery-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+.climate-table th,
+.climate-table td {
+  vertical-align: middle;
 }
 
 /* ---------- NEWSLETTER ---------- */
@@ -285,40 +321,17 @@ h4 {
 
 /* ----------- RESPONSIVE ----------- */
 
-/* Mobile (bis 768px) */
+/* Nur noch spezielle Elemente anpassen – nicht mehr .section überschreiben */
+
 @media (max-width: 767.98px) {
-  .hero {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  .section + .section {
-    margin-top: 50px;
-  }
-
-  .card-img-top-wrapper {
-    height: 180px;
-  }
-
-  .gallery-grid .gallery-item {
-    height: 150px;
+  .hero-banner {
+    padding: 60px 0;
+    min-height: 65vh;
   }
 
   .hero-subtitle {
-    max-width: 100%;
-  }
-}
-
-/* Tablet (768px bis 991px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .section {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .card-img-top-wrapper {
@@ -326,14 +339,21 @@ h4 {
   }
 }
 
-/* Desktop (ab 992px) */
-@media (min-width: 992px) {
-  .section {
-    padding-top: 110px;
-    padding-bottom: 110px;
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-img-top-wrapper {
+    height: 200px;
   }
+}
 
-  .section + .section {
-    margin-top: 80px;
+@media (min-width: 992px) {
+  .card-img-top-wrapper {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 0 0 200px;
+    height: 200px;
   }
 }
