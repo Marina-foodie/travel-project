@@ -33,22 +33,29 @@
       content="https://www.beispiel-domain.de/assets/madeira-hero.jpg"
     />
 
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- HEADER -->
     <header class="site-header border-bottom sticky-top bg-white bg-opacity-90">
       <div
         class="container py-2 d-flex align-items-center justify-content-between"
@@ -83,49 +90,49 @@
 
     <main id="top">
       <!-- HERO -->
-      <section class="hero position-relative py-5 py-lg-5">
+      <section class="hero position-relative py-5">
         <div class="hero-overlay"></div>
         <div class="container position-relative">
-          <div class="row align-items-center gy-4">
-            <div class="col-lg-7">
-              <p class="eyebrow text-uppercase mb-2">
-                Insel des ewigen Frühlings
-              </p>
-              <h1 class="hero-title">Entdecke das Paradies Madeira</h1>
-              <p class="hero-subtitle">
-                Dramatische Steilküsten, mystische Wälder und charmante
-                Küstenstädte – erlebe eine Reise, die du nie vergisst.
-              </p>
-              <div class="d-flex flex-wrap gap-2 mb-3">
-                <a href="#offers" class="btn btn-primary">
-                  <i class="fas fa-plane-departure me-2"></i>Jetzt Reise planen
-                </a>
-                <a href="#video" class="btn btn-outline-primary">
-                  <i class="fas fa-play me-2"></i>Highlights ansehen
-                </a>
-              </div>
-              <ul class="list-inline hero-meta small text-muted mb-0">
-                <li class="list-inline-item hero-pill">
-                  ☀️ 18–24°C das ganze Jahr
-                </li>
-                <li class="list-inline-item hero-pill">🥾 Top Wanderwege</li>
-                <li class="list-inline-item hero-pill">
-                  ✈️ Flüge ab vielen Städten
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-5 d-none d-lg-flex flex-column align-items-end">
-              <div class="hero-image w-100">
-                <img
-                  src="/images/Sonnenaufgang über den Wolken am Pico do Arieiro.jpeg"
-                  alt="Sonnenaufgang über den Wolken am Pico do Arieiro"
-                />
-              </div>
-              <div class="hero-chip mt-3">
-                🌅 Sonnenaufgang über den Wolken am Pico do Arieiro
-              </div>
-            </div>
+          <!-- Hero Bild -->
+          <div class="hero-image-wrapper mb-4">
+            <img
+              src="/images/sonnenaufgang-pico-do-arieiro.jpg"
+              alt="Sonnenaufgang über den Wolken am Pico do Arieiro"
+              class="hero-image"
+            />
+            <p class="hero-image-caption">
+              🌄 Sonnenaufgang über den Wolken am Pico do Arieiro
+            </p>
           </div>
+
+          <!-- Hero Text -->
+          <p class="eyebrow text-uppercase mb-2">Insel des ewigen Frühlings</p>
+          <h1 class="hero-title">Entdecke das Paradies Madeira</h1>
+          <p class="hero-subtitle">
+            Dramatische Steilküsten, mystische Wälder und charmante Küstenstädte
+            – erlebe eine Reise, die du nie vergisst.
+          </p>
+
+          <!-- Buttons -->
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <a href="#offers" class="btn btn-primary">
+              <i class="fas fa-plane-departure me-2"></i>Jetzt Reise planen
+            </a>
+            <a href="#highlights" class="btn btn-outline-primary">
+              <i class="fas fa-map-location-dot me-2"></i>Highlights ansehen
+            </a>
+          </div>
+
+          <!-- Meta-Pills -->
+          <ul class="list-inline hero-meta small text-muted mb-0">
+            <li class="list-inline-item hero-pill">
+              ☀️ 18–24°C das ganze Jahr
+            </li>
+            <li class="list-inline-item hero-pill">🥾 Top Wanderwege</li>
+            <li class="list-inline-item hero-pill">
+              ✈️ Flüge ab vielen Städten
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -146,7 +153,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/"
+                    src="/images/pico-do-arieiro.jpg"
                     alt="Pico do Arieiro bei Sonnenaufgang"
                     class="card-img-top"
                   />
@@ -166,8 +173,8 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Levadas Wanderungen.jpeg"
-                    alt="Levada-Wanderweg durch grünen Wald"
+                    src="/images/levadas-wanderungen.jpg"
+                    alt="Levada-Wanderweg durch den Wald"
                     class="card-img-top"
                   />
                 </div>
@@ -186,8 +193,8 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Funchal Altstadt.jpeg"
-                    alt="Altstadt von Funchal auf Madeira"
+                    src="/images/funchal-altstadt.jpg"
+                    alt="Altstadt von Funchal"
                     class="card-img-top"
                   />
                 </div>
@@ -206,7 +213,7 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Delfin- & Walbeobachtung.jpeg"
+                    src="/images/delfin-walbeobachtung.jpg"
                     alt="Delfine neben einem Boot vor Madeira"
                     class="card-img-top"
                   />
@@ -226,8 +233,8 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Botanischer Garten.jpeg"
-                    alt="Blühender Garten mit Blick auf Funchal"
+                    src="/images/botanischer-garten.jpg"
+                    alt="Botanischer Garten auf Madeira"
                     class="card-img-top"
                   />
                 </div>
@@ -246,8 +253,8 @@
               <div class="card h-100 shadow-sm border-0 highlight-card">
                 <div class="card-img-top-wrapper">
                   <img
-                    src="/images/Cabo Girão Skywalk.jpeg"
-                    alt="Cabo Girão Skywalk auf Madeira"
+                    src="/images/cabo-girao-skywalk.jpg"
+                    alt="Cabo Girão Skywalk"
                     class="card-img-top"
                   />
                 </div>
@@ -303,9 +310,148 @@
         </div>
       </section>
 
-      <!-- AKTIVITÄTEN, ANGEBOTE bleiben wie bei dir ... -->
+      <!-- AKTIVITÄTEN -->
+      <section id="activities" class="section bg-light">
+        <div class="container">
+          <header class="section-header text-center mb-4">
+            <h2 class="section-title">Aktivitäten auf Madeira</h2>
+            <p class="text-muted mb-0">
+              Abenteuer, Entspannung oder Genuss – du hast die Wahl.
+            </p>
+          </header>
 
-      <!-- GALERIE -->
+          <div class="row g-4">
+            <article class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="fas fa-person-hiking"></i>
+                </div>
+                <h3 class="h5">Wandern &amp; Natur</h3>
+                <p class="text-muted">
+                  Entdecke die besten Wanderwege, Levadas und Aussichtspunkte
+                  der Insel.
+                </p>
+              </div>
+            </article>
+
+            <article class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="fas fa-sailboat"></i>
+                </div>
+                <h3 class="h5">Boot &amp; Meer</h3>
+                <p class="text-muted">
+                  Von Katamaran-Touren bis Kajak – erlebe Madeira vom Wasser
+                  aus.
+                </p>
+              </div>
+            </article>
+
+            <article class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="fas fa-wine-glass-alt"></i>
+                </div>
+                <h3 class="h5">Kulinarik &amp; Wein</h3>
+                <p class="text-muted">
+                  Probiere Madeira-Wein, frische Meeresfrüchte und lokale
+                  Spezialitäten.
+                </p>
+              </div>
+            </article>
+
+            <article class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="fas fa-masks-theater"></i>
+                </div>
+                <h3 class="h5">Kultur &amp; Events</h3>
+                <p class="text-muted">
+                  Blumenfestival, Feuerwerk und traditionelle Feste das ganze
+                  Jahr.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANGEBOTE -->
+      <section id="offers" class="section">
+        <div class="container">
+          <header class="section-header text-center mb-4">
+            <h2 class="section-title">Reiseangebote für Madeira</h2>
+            <p class="text-muted mb-0">
+              Wähle das Paket, das zu deiner Art zu reisen passt.
+            </p>
+          </header>
+
+          <div class="row g-4">
+            <article class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 offer-card">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="h5">Madeira Explorer</h3>
+                  <p class="offer-tag text-muted">5 Tage · City &amp; Natur</p>
+                  <p class="offer-price">ab 699 €</p>
+                  <ul class="text-muted small">
+                    <li>4 Nächte im Boutique-Hotel in Funchal</li>
+                    <li>Geführte Stadttour &amp; Marktbesuch</li>
+                    <li>Halbtägige Küstenwanderung inklusive</li>
+                  </ul>
+                  <button class="btn btn-primary mt-auto w-100">
+                    Angebot anfragen
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-6 col-lg-4">
+              <div
+                class="card h-100 shadow-sm border border-primary offer-card position-relative"
+              >
+                <div class="badge bg-primary position-absolute top-0 end-0 m-2">
+                  Beliebt
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h3 class="h5">Nature Retreat</h3>
+                  <p class="offer-tag text-muted">
+                    7 Tage · Relax &amp; Nature
+                  </p>
+                  <p class="offer-price">ab 999 €</p>
+                  <ul class="text-muted small">
+                    <li>7 Nächte im Eco-Resort in den Bergen</li>
+                    <li>Yoga Sessions &amp; Spa-Zugang</li>
+                    <li>Geführte Levada-Wanderung</li>
+                  </ul>
+                  <button class="btn btn-primary mt-auto w-100">
+                    Jetzt Reise planen
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 offer-card">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="h5">Adventure Pack</h3>
+                  <p class="offer-tag text-muted">6 Tage · Aktiv</p>
+                  <p class="offer-price">ab 899 €</p>
+                  <ul class="text-muted small">
+                    <li>Jeep-Safari ins Landesinnere</li>
+                    <li>Klippenspaziergang &amp; Skywalk</li>
+                    <li>Delfin- &amp; Walbeobachtungs-Tour</li>
+                  </ul>
+                  <button class="btn btn-primary mt-auto w-100">
+                    Details ansehen
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIE / MADEIRA MOMENTS -->
       <section id="gallery" class="section bg-light">
         <div class="container">
           <header class="section-header text-center mb-4">
@@ -315,40 +461,38 @@
             </p>
           </header>
 
-          <div class="row g-3 gallery-grid">
+          <div class="row g-4 gallery-grid">
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="image-placeholder h-100">
-                <img src="/images/coast.png" alt="Steilküste von Madeira" />
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="image-placeholder h-100">
+              <div class="gallery-item">
                 <img
-                  src="/images/Funchal bei Nacht.png"
+                  src="/images/funchal-bei-nacht.jpg"
                   alt="Funchal bei Nacht"
                 />
               </div>
             </div>
+
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="image-placeholder h-100">
+              <div class="gallery-item">
                 <img
-                  src="/images/Levadas & Wald.png"
-                  alt="Levadas &amp; Wald"
+                  src="/images/levadas-wald.jpg"
+                  alt="Levadas und Wald auf Madeira"
                 />
               </div>
             </div>
+
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="image-placeholder h-100">
+              <div class="gallery-item">
                 <img
-                  src="/images/Blumen & Gärten.png"
+                  src="/images/blumen-gaerten.jpg"
                   alt="Blumen und Gärten auf Madeira"
                 />
               </div>
             </div>
-            <div class="col-12 col-md-8 mx-md-auto mt-3">
-              <div class="image-placeholder wide">
+
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="gallery-item">
                 <img
-                  src="/images/Sonnenuntergang am Meer.png"
+                  src="/images/sonnenuntergang-am-meer.jpg"
                   alt="Sonnenuntergang am Meer vor Madeira"
                 />
               </div>
@@ -357,11 +501,54 @@
         </div>
       </section>
 
-      <!-- Newsletter & Footer wie bei dir ... -->
+      <!-- NEWSLETTER -->
+      <section id="newsletter" class="section newsletter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div
+                class="newsletter-box p-4 p-md-5 rounded-4 shadow-sm bg-white"
+              >
+                <h2 class="section-title h3">
+                  Reisetipps für Madeira in deinem Postfach
+                </h2>
+                <p class="text-muted mb-3">
+                  Erhalte exklusive Tipps zu den besten Reisezeiten,
+                  Geheimspots, Wanderungen und kulinarischen Highlights.
+                </p>
+                <form class="newsletter-form row g-2" action="#" method="post">
+                  <div class="col-12 col-md-8">
+                    <label for="newsletter-email" class="visually-hidden">
+                      E-Mail-Adresse
+                    </label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="newsletter-email"
+                      name="email"
+                      placeholder="Deine E-Mail-Adresse"
+                      required
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-grid">
+                    <button type="submit" class="btn btn-primary">
+                      Reisetipps erhalten
+                    </button>
+                  </div>
+                </form>
+                <p class="newsletter-hint small text-muted mt-2 mb-0">
+                  Kein Spam, nur sorgfältig kuratierte Inspiration – jederzeit
+                  abmeldbar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer bg-dark text-light pt-4 mt-4">
-      <!-- dein Footer-Code wie bisher -->
       <div class="container">
         <div class="row gy-4 pb-3">
           <div class="col-md-4">
@@ -383,8 +570,8 @@
             <h4 class="h6">Kontakt</h4>
             <ul class="list-unstyled small mb-0">
               <li>
-                <a href="mailto:info@madeira-escape.ch" class="footer-link"
-                  >info@madeira-escape.ch</a
+                <a href="mailto:info@madeira-escape.example" class="footer-link"
+                  >info@madeira-escape.example</a
                 >
               </li>
               <li class="text-secondary">+351 · 000 · 000 000</li>
@@ -420,6 +607,7 @@
       </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

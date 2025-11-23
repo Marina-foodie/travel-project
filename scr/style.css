@@ -13,7 +13,6 @@ body {
   color: var(--color-text);
 }
 
-/* Alle Bilder generell responsive halten */
 img {
   max-width: 100%;
   height: auto;
@@ -74,9 +73,13 @@ h4 {
 }
 
 .hero-subtitle {
-  max-width: 32rem;
+  max-width: 38rem;
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-meta {
+  margin-top: 0.5rem;
 }
 
 .hero-pill {
@@ -94,17 +97,24 @@ h4 {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
 }
 
-/* Hero Bild */
-.hero-image {
-  border-radius: 1.25rem;
-  overflow: hidden;
-  max-height: 380px;
+/* Hero Bild zentriert & formatiert */
+.hero-image-wrapper {
+  max-width: 520px;
+  margin: 0 auto 1.5rem auto;
 }
 
-.hero-image img {
+.hero-image {
   width: 100%;
-  height: 100%;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
   object-fit: cover;
+}
+
+.hero-image-caption {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 /* ---------------- SPACING FÜR ALLE SECTIONS ---------------- */
@@ -118,12 +128,11 @@ h4 {
   margin-top: 70px;
 }
 
-/* Etwas mehr Luft nach dem Video-Block */
 #video {
   padding-bottom: 100px;
 }
 
-/* Titelgröße & Luft unter den Überschriften */
+/* Titelgrößen */
 .section-header .section-title {
   font-size: 2rem;
   margin-bottom: 0.75rem;
@@ -133,15 +142,22 @@ h4 {
   margin-bottom: 2.5rem;
 }
 
-/* ---------- HIGHLIGHTS THUMBNAILS ---------- */
+/* ---------- HIGHLIGHTS ---------- */
 
 .highlight-card {
   padding-top: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
 }
 
 .card-img-top-wrapper {
-  height: 160px;
-  border-radius: 1rem 1rem 0 0;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -152,6 +168,7 @@ h4 {
 }
 
 /* ---------- VIDEO ---------- */
+
 .video-placeholder {
   border-radius: 1.5rem;
   background: radial-gradient(circle at top left, #1e6ba8 0, #0e3a5a 60%);
@@ -185,7 +202,7 @@ h4 {
   font-size: 1.1rem;
 }
 
-/* ---------- AKTIVITÄTEN ICONS ---------- */
+/* ---------- AKTIVITÄTEN ---------- */
 
 .icon-circle {
   width: 52px;
@@ -211,27 +228,26 @@ h4 {
   font-size: 0.9rem;
 }
 
-/* ---------- GALERIE ---------- */
+/* ---------- GALERIE (Madeira Moments) ---------- */
 
-.image-placeholder {
+.gallery-grid .gallery-item {
+  width: 100%;
+  height: 200px;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-grid .image-placeholder {
-  min-height: 140px;
-  max-height: 280px;
-}
-
-.gallery-grid .image-placeholder img {
+.gallery-grid .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.image-placeholder.wide {
-  min-height: 180px;
-  max-height: 260px;
+.gallery-grid .gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------- NEWSLETTER ---------- */
@@ -267,12 +283,13 @@ h4 {
   border-color: #15547f;
 }
 
-/* ----------- Responsive Feintuning ----------- */
+/* ----------- RESPONSIVE ----------- */
 
 /* Mobile (bis 768px) */
 @media (max-width: 767.98px) {
   .hero {
-    padding-top: 3.5rem;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .section {
@@ -288,8 +305,12 @@ h4 {
     height: 180px;
   }
 
-  .hero-image {
-    max-height: 260px;
+  .gallery-grid .gallery-item {
+    height: 150px;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
   }
 }
 
@@ -301,7 +322,7 @@ h4 {
   }
 
   .card-img-top-wrapper {
-    height: 180px;
+    height: 190px;
   }
 }
 
